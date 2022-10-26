@@ -24,15 +24,25 @@ La finalidad de este demo es configurar Github Actions para realizar deploymente
 
 ### Paso a Paso
 
-1. Crear cluster OKE - 
+0. Crear proyecto en Github
+    Dashboard > New
+    Definir nombre: githubaction-OKE
+    ![quickCrate](img/createRepo.PNG)
+    
+1. Clonar Repositorio
+    Una vez creado el repositorio, se debe clonar desde la URL https://github.com/whiplash0104/githubaction-oci.git
+    ![quickCrate](img/import.PNG)
+    ![quickCrate](img/cloneRepo.PNG)
+    
+2. Crear cluster OKE - 
 	Menu -> Developer Services -> Kubernetes Clusters (OKE) -> Quick Create
 	![quickCrate](img/createOKE.PNG)
 
-2. Una vez que finalice el proceso, crear kubeconfig
+3. Una vez que finalice el proceso, crear kubeconfig
     ```
     $ oci ce cluster create-kubeconfig --cluster-id <cluster ocid> --file $HOME/.kube/config --region us-ashburn-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
     ```
-3. Crear OCI Setup Configurar
+4. Crear OCI Setup Configurar
 	```
 	Crear config 
 	oci setup config
@@ -45,12 +55,12 @@ La finalidad de este demo es configurar Github Actions para realizar deploymente
 			- Validar el directorio donde se crearán
 			- Validar el nombre de las llaves
 	```
-3.1 Para validar, hacer cat al archivo de configuración 
+4.1 Para validar, hacer cat al archivo de configuración 
 	```
 	$ cat ~/.oci/NOMBREARCHIVO
 	```
 	
-4. Crear API Key (permite conectar a kubernetes y realizar el despliegue mediante Helm)
+5. Crear API Key (permite conectar a kubernetes y realizar el despliegue mediante Helm)
 	![apikey](img/userAPIKeys.PNG)
 	Menu -> Identity & Security -> User -> User Details -> Add API Key
 	```
@@ -58,7 +68,7 @@ La finalidad de este demo es configurar Github Actions para realizar deploymente
 			$ cat .oci/oci_api_key_public.pem
 	```
 
-4.2 El fingerprint que se crea debe ser el mismo q está en ~/.oci/NOMBREARCHIVO
+5.1 El fingerprint que se crea debe ser el mismo q está en ~/.oci/NOMBREARCHIVO
 	```
 	$ fgrep "XXXXXX" ~/.oci/NOMBREARCHIVO
 	```
