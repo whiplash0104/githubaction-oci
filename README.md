@@ -8,19 +8,19 @@ La finalidad de este demo es configurar Github Actions para realizar deploymente
 - Cuenta de Oracle Cloud Infrastructure(test gratuito https://www.oracle.com/cloud/free/)
 - Cuenta de Github (https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
 
-### Procedimiento (Resumido)
+### ¿Qué vamos a hacer?
 
-1 Clonar repositorio Github
-2 Configurar OKE
-3 Configurar Github Actions
-4 Despliegue de aplicación
-	4.1 Descargar imágen desde dockerhub
-	4.2 Crear imágen personalizada de contenedor (compilar)
-	4.3 Subirla a OCI registry
-	4.4 Instalar app desde Helm
-	4.5 Despliegue en Kubernetes
-5. Modificar aplicación
-6. Despliegue automático 
+- Clonar repositorio Github
+- Configurar OKE
+- Configurar Github Actions
+- Despliegue de aplicación
+	- Descargar imágen desde dockerhub
+	- Crear imágen personalizada de contenedor (compilar)
+	- Subirla a OCI registry
+	- Instalar app desde Helm
+	- Despliegue en Kubernetes
+- Modificar aplicación
+- Despliegue automático 
 
 ### Paso a Paso
 
