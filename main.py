@@ -7,7 +7,7 @@ app = FastAPI()
 
 @app.get("/")
 def hello():
-    return {"Ya malio sal"}
+    return {"Hola, ¿cómo están?"}
 
 
 @app.get("/name/{name}")
